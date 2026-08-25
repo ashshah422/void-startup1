@@ -1,67 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VOID | Molecular Odor & Moisture Vacuum</title>
+  <title>VOID | Molecular Athletic Gear Care</title>
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .glow-lime {
+      box-shadow: 0 0 35px -5px rgba(204, 255, 0, 0.25);
+    }
+  </style>
 </head>
-<body class="bg-neutral-950 text-white font-sans antialiased">
-  <!-- Nav -->
-  <nav class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-neutral-800">
-    <span class="text-2xl font-black tracking-widest text-lime-400">VOID</span>
-    <a href="#preorder" class="bg-lime-400 text-black px-5 py-2 rounded-full font-bold hover:bg-lime-300 transition">Pre-Order</a>
+<body class="bg-neutral-950 text-neutral-100 font-sans antialiased selection:bg-lime-400 selection:text-black">
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-40 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl font-black tracking-widest text-lime-400">VOID</span>
+        <span class="text-xs uppercase px-2 py-0.5 rounded bg-neutral-800 text-neutral-400 border border-neutral-700">Lab Grade</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-300">
+        <a href="#product" class="hover:text-lime-400 transition">Design & Anatomy</a>
+        <a href="#problem" class="hover:text-lime-400 transition">Problem</a>
+        <a href="#solution" class="hover:text-lime-400 transition">Solution</a>
+        <a href="#audience" class="hover:text-lime-400 transition">Who It's For</a>
+        <a href="#pricing" class="hover:text-lime-400 transition">Pricing</a>
+        <button onclick="togglePitchModal()" class="text-lime-400 border border-lime-400/40 px-3 py-1 rounded-full text-xs font-semibold hover:bg-lime-400/10 transition">
+          📊 Startup Strategy / Pitch Deck
+        </button>
+      </div>
+      <a href="#pricing" class="bg-lime-400 text-black px-4 py-2 rounded-lg font-bold text-sm hover:bg-lime-300 transition">
+        Pre-Order
+      </a>
+    </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="max-w-4xl mx-auto px-6 py-20 text-center">
-    <span class="inline-block bg-neutral-900 border border-neutral-700 text-lime-400 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wider">
-      Activated Charcoal + Silica Matrix
-    </span>
-    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-      Silence the Stench. <br /><span class="text-neutral-400">Dry the Grind.</span>
+  <!-- HERO SECTION -->
+  <header class="max-w-5xl mx-auto px-6 pt-16 pb-12 text-center">
+    <div class="inline-flex items-center gap-2 bg-neutral-900 border border-neutral-800 text-lime-400 text-xs font-semibold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wider">
+      <i data-lucide="zap" class="w-3.5 h-3.5"></i> All-Natural Molecular Odor & Moisture Vacuum
+    </div>
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+      Silence the Stench. <br /><span class="text-neutral-500">Dry the Grind.</span>
     </h1>
-    <p class="text-lg text-neutral-300 max-w-2xl mx-auto mb-8">
-      The all-natural odor and moisture vacuum engineered for boxing gloves, cleats, and sports bags. No synthetic fragrances—just pure, dry gear.
+    <p class="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-8 leading-relaxed">
+      Engineered for boxing gloves, cleats, and sports bags. Activated bamboo charcoal and indicating silica gel extract 100% of moisture and eliminate bacteria without chemical perfumes.
     </p>
-    <a href="#preorder" class="inline-block bg-lime-400 text-black px-8 py-4 rounded-xl font-bold text-lg hover:bg-lime-300 transition shadow-lg shadow-lime-400/20">
-      Claim Your Launch Pack — $19.99
-    </a>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#pricing" class="w-full sm:w-auto bg-lime-400 text-black px-8 py-4 rounded-xl font-bold text-base hover:bg-lime-300 transition glow-lime">
+        Claim Your Drop — $19.99
+      </a>
+      <button onclick="togglePitchModal()" class="w-full sm:w-auto bg-neutral-900 border border-neutral-800 text-neutral-300 px-6 py-4 rounded-xl font-semibold hover:border-neutral-700 transition">
+        View Pitch & Business Model
+      </button>
+    </div>
+  </header>
+
+  <!-- PRODUCT SHOWCASE / ANATOMY IMAGE SECTION -->
+  <section id="product" class="max-w-5xl mx-auto px-6 pb-16">
+    <div class="bg-neutral-900/60 border border-neutral-800 rounded-3xl p-4 md:p-6 glow-lime">
+      <div class="relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-950 flex items-center justify-center">
+        <img 
+          src="./void-product.png" 
+          alt="VOID Product Anatomy - Activated Bamboo Charcoal, Indicating Silica Gel, and Athletic Spacer Mesh" 
+          class="w-full h-auto object-cover rounded-xl"
+          onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80';"
+        />
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 text-center">
+        <div class="p-3 bg-neutral-950/80 rounded-xl border border-neutral-800">
+          <span class="text-xs font-bold text-lime-400 block mb-1">Activated Charcoal</span>
+          <span class="text-[11px] text-neutral-400">Odor adsorption pellets</span>
+        </div>
+        <div class="p-3 bg-neutral-950/80 rounded-xl border border-neutral-800">
+          <span class="text-xs font-bold text-lime-400 block mb-1">Indicating Silica</span>
+          <span class="text-[11px] text-neutral-400">Sweat & moisture extraction</span>
+        </div>
+        <div class="p-3 bg-neutral-950/80 rounded-xl border border-neutral-800">
+          <span class="text-xs font-bold text-lime-400 block mb-1">Spacer Mesh Layer</span>
+          <span class="text-[11px] text-neutral-400">Maximum breathable airflow</span>
+        </div>
+        <div class="p-3 bg-neutral-950/80 rounded-xl border border-neutral-800">
+          <span class="text-xs font-bold text-lime-400 block mb-1">Dust-Proof Lining</span>
+          <span class="text-[11px] text-neutral-400">Non-woven high density</span>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Problem vs Solution -->
-  <section class="max-w-5xl mx-auto px-6 py-16">
+  <!-- PROBLEM STATEMENT SECTION -->
+  <section id="problem" class="max-w-6xl mx-auto px-6 py-16 border-t border-neutral-900">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-xs uppercase tracking-widest text-red-400 font-bold mb-2">The Breakdown</h2>
+      <h3 class="text-3xl font-extrabold">Sprays Only Mask. VOID Solves.</h3>
+    </div>
     <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-neutral-900/60 p-8 rounded-2xl border border-red-500/20">
-        <h3 class="text-red-400 font-bold text-xl mb-4">Traditional Sprays</h3>
-        <p class="text-neutral-400 mb-2">❌ Mask smells with overwhelming fake chemicals.</p>
-        <p class="text-neutral-400 mb-2">❌ Leave wet residue inside your gear.</p>
-        <p class="text-neutral-400">❌ Trapped moisture breeds mold and bacteria.</p>
+      <div class="bg-neutral-900/40 p-8 rounded-2xl border border-red-500/20">
+        <div class="flex items-center gap-3 mb-6">
+          <i data-lucide="x-circle" class="w-6 h-6 text-red-400"></i>
+          <h4 class="text-xl font-bold text-red-400">Traditional Spray Deodorizers</h4>
+        </div>
+        <ul class="space-y-4 text-neutral-400 text-sm">
+          <li class="flex items-start gap-2"><span>❌</span> <span><strong>Leaves chemical moisture:</strong> Adds dampness inside sealed gloves and cleats, feeding bacteria.</span></li>
+          <li class="flex items-start gap-2"><span>❌</span> <span><strong>Synthetic cover-ups:</strong> Chemical perfumes blend with sweat to create a harsher chemical stench.</span></li>
+          <li class="flex items-start gap-2"><span>❌</span> <span><strong>Gear degradation:</strong> Damp leather and linings rot, ruining expensive athletic gear.</span></li>
+        </ul>
       </div>
-      <div class="bg-neutral-900 p-8 rounded-2xl border border-lime-400/40">
-        <h3 class="text-lime-400 font-bold text-xl mb-4">VOID Vacuum Inserts</h3>
-        <p class="text-neutral-300 mb-2">✅ 100% natural, fragrance-free activated charcoal.</p>
-        <p class="text-neutral-300 mb-2">✅ High-capacity silica beads extract sweat instantly.</p>
-        <p class="text-neutral-300">✅ Recharges under direct sunlight for 12 months.</p>
+
+      <div class="bg-neutral-900/90 p-8 rounded-2xl border border-lime-400/40 relative glow-lime">
+        <div class="flex items-center gap-3 mb-6">
+          <i data-lucide="check-circle-2" class="w-6 h-6 text-lime-400"></i>
+          <h4 class="text-xl font-bold text-lime-400">The VOID Vacuum System</h4>
+        </div>
+        <ul class="space-y-4 text-neutral-300 text-sm">
+          <li class="flex items-start gap-2"><span>✅</span> <span><strong>Targeted extraction:</strong> High-capacity silica beads pull out humidity within 4 hours.</span></li>
+          <li class="flex items-start gap-2"><span>✅</span> <span><strong>100% natural adsorption:</strong> Microporous activated charcoal binds volatile organic compounds permanently.</span></li>
+          <li class="flex items-start gap-2"><span>✅</span> <span><strong>12-Month recharge:</strong> Sit it in direct sunlight once a month to reset and reuse.</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Pre-Order CTA -->
-  <section id="preorder" class="max-w-xl mx-auto px-6 py-16 text-center">
-    <div class="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl">
-      <h2 class="text-2xl font-bold mb-2">Join the First Drop</h2>
-      <p class="text-neutral-400 text-sm mb-6">Enter your email to get 20% off when the first batch ships.</p>
-      <form onsubmit="event.preventDefault(); alert('You are on the VIP pre-order list!');" class="flex flex-col gap-3">
-        <input type="email" required placeholder="Enter your email address" class="px-4 py-3 rounded-lg bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-500 focus:outline-none focus:border-lime-400" />
-        <button type="submit" class="bg-lime-400 text-black py-3 rounded-lg font-bold hover:bg-lime-300 transition">Get Early Access</button>
+  <!-- WHO IT IS FOR -->
+  <section id="audience" class="max-w-6xl mx-auto px-6 py-16 border-t border-neutral-900">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-xs uppercase tracking-widest text-lime-400 font-bold mb-2">Target Market</h2>
+      <h3 class="text-3xl font-extrabold">Engineered For High-Output Athletes</h3>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-800">
+        <i data-lucide="shield" class="w-8 h-8 text-lime-400 mb-4"></i>
+        <h4 class="font-bold text-lg mb-2">Combat Athletes</h4>
+        <p class="text-xs text-neutral-400">Boxers, Muay Thai, and BJJ practitioners dealing with foul sweat in enclosed gloves and shin guards.</p>
+      </div>
+      <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-800">
+        <i data-lucide="activity" class="w-8 h-8 text-lime-400 mb-4"></i>
+        <h4 class="font-bold text-lg mb-2">Cleat & Turf Sports</h4>
+        <p class="text-xs text-neutral-400">Soccer, rugby, and track athletes protecting specialized footwear from mold, mud dampness, and bacterial rot.</p>
+      </div>
+      <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-800">
+        <i data-lucide="dumbbell" class="w-8 h-8 text-lime-400 mb-4"></i>
+        <h4 class="font-bold text-lg mb-2">Gym & CrossFit</h4>
+        <p class="text-xs text-neutral-400">Daily commuters who leave sweaty gym bags in cars, lockers, or desks all workday.</p>
+      </div>
+      <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-800">
+        <i data-lucide="sparkles" class="w-8 h-8 text-lime-400 mb-4"></i>
+        <h4 class="font-bold text-lg mb-2">Sneakerheads</h4>
+        <p class="text-xs text-neutral-400">Collectors preserving rare sneaker materials from humidity warping and yellowing over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES -->
+  <section id="solution" class="max-w-6xl mx-auto px-6 py-16 border-t border-neutral-900">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-xs uppercase tracking-widest text-lime-400 font-bold mb-2">Technical Specs</h2>
+      <h3 class="text-3xl font-extrabold">How VOID Cleans at the Particle Level</h3>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-neutral-900/60 p-6 rounded-xl border border-neutral-800">
+        <span class="text-2xl font-black text-lime-400 mb-2 block">01</span>
+        <h4 class="font-bold mb-2">Ballistic Breathable Sleeve</h4>
+        <p class="text-xs text-neutral-400 leading-relaxed">Tear-proof spacer mesh allows maximum air and moisture exchange without spilling micro-beads.</p>
+      </div>
+      <div class="bg-neutral-900/60 p-6 rounded-xl border border-neutral-800">
+        <span class="text-2xl font-black text-lime-400 mb-2 block">02</span>
+        <h4 class="font-bold mb-2">Dual Core Extraction Matrix</h4>
+        <p class="text-xs text-neutral-400 leading-relaxed">High-capacity indicating silica beads capture sweat instantly; activated bamboo charcoal binds odor molecules.</p>
+      </div>
+      <div class="bg-neutral-900/60 p-6 rounded-xl border border-neutral-800">
+        <span class="text-2xl font-black text-lime-400 mb-2 block">03</span>
+        <h4 class="font-bold mb-2">Solar Thermal Reset</h4>
+        <p class="text-xs text-neutral-400 leading-relaxed">UV rays and solar heat release trapped moisture and off-gas VOCs, refreshing the inserts for up to a full year.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING BUNDLES -->
+  <section id="pricing" class="max-w-6xl mx-auto px-6 py-16 border-t border-neutral-900">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-xs uppercase tracking-widest text-lime-400 font-bold mb-2">Pre-Order Drops</h2>
+      <h3 class="text-3xl font-extrabold">Choose Your Gear Protection</h3>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+        <div>
+          <h4 class="font-bold text-lg mb-1">Starter Twin-Pack</h4>
+          <p class="text-xs text-neutral-400 mb-4">Ideal for 1 pair of shoes or gloves</p>
+          <div class="text-3xl font-black mb-6">$19.99</div>
+          <ul class="text-xs text-neutral-300 space-y-3 mb-6">
+            <li>✓ 2x VOID Insert Pods</li>
+            <li>✓ 12-Month Reusable Life</li>
+            <li>✓ Free Mesh Travel Pouch</li>
+          </ul>
+        </div>
+        <button onclick="selectTier('Starter Pack')" class="w-full bg-neutral-800 hover:bg-neutral-700 py-3 rounded-lg font-bold text-xs transition">Select Starter</button>
+      </div>
+
+      <div class="bg-neutral-900 p-8 rounded-2xl border-2 border-lime-400 flex flex-col justify-between relative glow-lime">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-lime-400 text-black text-[10px] font-black uppercase px-3 py-0.5 rounded-full">Most Popular</span>
+        <div>
+          <h4 class="font-bold text-lg mb-1 text-lime-400">Pro Athlete Quad-Pack</h4>
+          <p class="text-xs text-neutral-400 mb-4">For gloves, cleats & gym bag</p>
+          <div class="text-3xl font-black mb-6">$34.99</div>
+          <ul class="text-xs text-neutral-300 space-y-3 mb-6">
+            <li>✓ 4x VOID Insert Pods</li>
+            <li>✓ Integrated Carabiner Clip</li>
+            <li>✓ 12-Month Reusable Life</li>
+            <li>✓ 20% Off Launch Discount</li>
+          </ul>
+        </div>
+        <button onclick="selectTier('Pro Quad Pack')" class="w-full bg-lime-400 hover:bg-lime-300 text-black py-3 rounded-lg font-bold text-xs transition">Select Pro Pack</button>
+      </div>
+
+      <div class="bg-neutral-900 p-8 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+        <div>
+          <h4 class="font-bold text-lg mb-1">Gym / Team Bulk</h4>
+          <p class="text-xs text-neutral-400 mb-4">For gyms, dojos, & sports clubs</p>
+          <div class="text-3xl font-black mb-6">$79.99</div>
+          <ul class="text-xs text-neutral-300 space-y-3 mb-6">
+            <li>✓ 10x VOID Insert Pods</li>
+            <li>✓ Custom Gym Co-Branding Option</li>
+            <li>✓ Priority Bulk Shipping</li>
+          </ul>
+        </div>
+        <button onclick="selectTier('Team Bulk Pack')" class="w-full bg-neutral-800 hover:bg-neutral-700 py-3 rounded-lg font-bold text-xs transition">Select Team Bulk</button>
+      </div>
+    </div>
+
+    <!-- PRE-ORDER FORM -->
+    <div class="max-w-xl mx-auto mt-16 bg-neutral-900 border border-neutral-800 p-8 rounded-2xl text-center">
+      <h3 class="text-2xl font-bold mb-2">Claim Your Pre-Order Spot</h3>
+      <p class="text-neutral-400 text-xs mb-6">Reserve your batch now. No charge until your order is packaged and shipped.</p>
+      <form onsubmit="handlePreorder(event)" class="space-y-4">
+        <input id="tier-input" type="text" readonly value="Pro Quad Pack ($34.99)" class="w-full px-4 py-3 bg-neutral-950 border border-neutral-800 rounded-lg text-xs text-lime-400 font-semibold focus:outline-none" />
+        <input required type="email" placeholder="Enter your email" class="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-lime-400" />
+        <button type="submit" class="w-full bg-lime-400 hover:bg-lime-300 text-black py-3 rounded-lg font-bold text-sm transition">Complete Pre-Order Reservation</button>
       </form>
+      <div id="toast" class="hidden mt-4 p-3 bg-lime-400/10 border border-lime-400 text-lime-400 text-xs rounded-lg font-semibold">
+        🎉 Success! You're locked in for the initial VOID drop. Check your inbox for confirmation.
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center py-8 text-neutral-600 text-xs border-t border-neutral-900">
-    © 2026 VOID Athletic Care. All rights reserved.
+  <!-- FOOTER -->
+  <footer class="max-w-6xl mx-auto px-6 py-12 border-t border-neutral-900 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-neutral-500">
+    <div>© 2026 VOID Athletic Innovations. All rights reserved.</div>
+    <div class="flex items-center gap-6">
+      <button onclick="togglePitchModal()" class="hover:text-lime-400 transition underline">Startup Strategy Deck</button>
+      <a href="#problem" class="hover:text-neutral-300 transition">About VOID</a>
+    </div>
   </footer>
+
+  <!-- STARTUP STRATEGY & PITCH DECK MODAL -->
+  <div id="pitch-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-neutral-900 border border-neutral-800 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-8 relative">
+      <button onclick="togglePitchModal()" class="absolute top-6 right-6 text-neutral-400 hover:text-white text-xl font-bold">&times;</button>
+      
+      <div class="flex items-center gap-2 mb-6">
+        <span class="text-xs uppercase px-2 py-0.5 rounded bg-lime-400/10 text-lime-400 border border-lime-400/30 font-bold">Executive Pitch Deck</span>
+        <span class="text-xs text-neutral-400">AI Startup Build Challenge</span>
+      </div>
+
+      <h3 class="text-2xl font-black mb-6">VOID — Business & Strategy Architecture</h3>
+
+      <div class="space-y-6 text-sm text-neutral-300 leading-relaxed">
+        <div>
+          <h4 class="text-lime-400 font-bold uppercase text-xs tracking-wider mb-1">1. Problem Statement</h4>
+          <p class="text-neutral-400 text-xs">Athletes and fitness enthusiasts face rapid bacterial rot and severe odors in enclosed gear bags, boxing gloves, and cleats. Chemical sprays only add wet residue and mask smells with synthetic perfumes, failing to address trapped sweat.</p>
+        </div>
+
+        <div>
+          <h4 class="text-lime-400 font-bold uppercase text-xs tracking-wider mb-1">2. Solution</h4>
+          <p class="text-neutral-400 text-xs">VOID is an all-natural, reusable moisture and odor vacuum insert. Utilizing activated bamboo charcoal and high-capacity indicating silica gel in an athletic spacer mesh sleeve with dust-proof lining, VOID adsorbs volatile organic compounds and dries equipment from the inside out.</p>
+        </div>
+
+        <div>
+          <h4 class="text-lime-400 font-bold uppercase text-xs tracking-wider mb-1">3. Target Market</h4>
+          <p class="text-neutral-400 text-xs">Combat athletes (boxing, MMA, BJJ), soccer/track runners, high-frequency gym commuters, and specialty sneaker collectors who invest heavily in footwear and gear.</p>
+        </div>
+
+        <div>
+          <h4 class="text-lime-400 font-bold uppercase text-xs tracking-wider mb-1">4. Market Sizing (TAM, SAM, SOM)</h4>
+          <div class="grid grid-cols-3 gap-2 mt-2 text-center text-xs">
+            <div class="bg-neutral-950 p-3 rounded-lg border border-neutral-800">
+              <span class="text-neutral-400 block text-[10px]">TAM (Global)</span>
+              <strong class="text-lime-400 text-sm">$1.4B+</strong>
+              <span class="text-[10px] text-neutral-500 block">Shoe & gear care</span>
+            </div>
+            <div class="bg-neutral-950 p-3 rounded-lg border border-neutral-800">
+              <span class="text-neutral-400 block text-[10px]">SAM</span>
+              <strong class="text-lime-400 text-sm">$320M</strong>
+              <span class="text-[10px] text-neutral-500 block">Fitness gear accessories</span>
+            </div>
+            <div class="bg-neutral-950 p-3 rounded-lg border border-neutral-800">
+              <span class="text-neutral-400 block text-[10px]">SOM (Year 1-2)</span>
+              <strong class="text-lime-400 text-sm">$1.8M</strong>
+              <span class="text-[10px] text-neutral-500 block">D2C & Gym partnerships</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lime-400 font-bold uppercase text-xs tracking-wider mb-1">5. Revenue Model</h4>
+          <p class="text-neutral-400 text-xs">Direct-to-Consumer e-commerce packs ($19.99 - $34.99), Subscribe & Save quarterly refill plans (15% recurring margin), and B2B wholesale co-branded units supplied directly to martial arts gyms and fitness clubs.</p>
+        </div>
+
+        <div>
+          <h4 class="text-lime-400 font-bold uppercase text-xs tracking-wider mb-1">6. Go-To-Market (GTM) Strategy</h4>
+          <p class="text-neutral-400 text-xs">Micro-influencer sampling with combat sports athletes (unboxing and smell tests), local martial arts gym ambassador placement programs, and viral visual science demonstrations (humidity chambers vs sprays) on short-form video platforms.</p>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-neutral-800 text-right">
+        <button onclick="togglePitchModal()" class="bg-lime-400 text-black px-6 py-2 rounded-lg font-bold text-xs hover:bg-lime-300 transition">Close Pitch View</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    function selectTier(name) {
+      document.getElementById('tier-input').value = name;
+      window.location.hash = 'pricing';
+    }
+
+    function togglePitchModal() {
+      const modal = document.getElementById('pitch-modal');
+      modal.classList.toggle('hidden');
+    }
+
+    function handlePreorder(e) {
+      e.preventDefault();
+      document.getElementById('toast').classList.remove('hidden');
+    }
+  </script>
 </body>
 </html>
